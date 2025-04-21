@@ -17,5 +17,36 @@ This project demonstrates a robust **remote sensor monitoring system** using an 
 
 ---
 
-## 🛠️ System Architecture
+
+## 🧪 How It Works
+
+1. ESP32 connects to Wi-Fi and Tailscale network.
+2. It sends sensor readings (e.g., temperature, pH) to a predefined IP/port.
+3. The Linux server receives and logs the data into an Excel sheet.
+4. Data is timestamped and organized in `sensor_data.xlsx`.
+
+---
+
+## 🚀 Getting Started
+
+### ESP32 Setup
+- Upload the TCP client code from `esp32_client/` using Arduino IDE or ESP-IDF.
+- Connect to a Wi-Fi network.
+- Ensure Tailscale is active on the ESP32 (via gateway forwarding or static IP).
+
+### Linux Server Setup
+- Install `libxlsxwriter`:  
+  ```bash
+  sudo apt install libxlsxwriter-dev
+
+## 🧪 Prerequisites
+### On Linux Server (Gateway or Remote)
+- `libxlsxwriter`: Install using:
+  ```bash
+  sudo apt install libxlsxwriter-dev
+- GCC Compiler
+- Tailscale installed and authenticated:
+ ```
+sudo apt install tailscale
+sudo tailscale up
 
