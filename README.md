@@ -47,6 +47,25 @@ This project demonstrates a robust **remote sensor monitoring system** using an 
 - GCC Compiler
 - Tailscale installed and authenticated:
  ```
-sudo apt install tailscale
-sudo tailscale up
+$sudo apt install tailscale
+$sudo tailscale up
+```
+- Compile and run the C server:
+```
+$ gcc server.c -o server -lxlsxwriter
+./server
+```
+## 🖼️ Preview Images
+
+| Gateway Device/PC-A | PC-B | Excell Data Logging |
+|:---------:|:----------:|:---------:|
+| ![Schematic](Img/PC-A.png) | ![PCB](Img/PC-B.png) | ![3D](Img/Excell.png) |
+
+## 🔧 How to Use
+
+1️⃣ Flash the ESP32 with the code in `/esp32_client/`  
+2️⃣ Run the TCP server from `/linux_server/` on PC-A (Linux system)  
+3️⃣ Ensure both ESP32 and Gateway Device are on the same local network  
+4️⃣ Use Tailscale to connect PC-A securely via VPN  
+5️⃣ Sensor data received is logged in `sensor_data.xlsx` using libxlsxwriter
 
