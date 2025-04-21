@@ -1,6 +1,9 @@
 # 🌐 ESP32-Based Remote Sensor System with Excel Data Logging over Tailscale VPN
 
-![Project Banner](images/project_diagram.png)
+<p align="center">
+  <img src="Img/Block_Diagram.png" alt="Project Banner" width="200"/>
+</p>
+
 
 This project demonstrates a robust **remote sensor monitoring system** using an **ESP32 microcontroller** that transmits sensor data over **TCP** to a **Linux-based server**. The data is received and logged in real-time to an **Excel (.xlsx)** file using `libxlsxwriter`. Communication is made possible across different networks via a **Tailscale VPN**, enabling secure and seamless connectivity.
 
@@ -59,7 +62,7 @@ $ gcc server.c -o server -lxlsxwriter
 
 | Gateway Device/PC-A | PC-B | Excell Data Logging |
 |:---------:|:----------:|:---------:|
-| ![Schematic](Img/PC-A.png) | ![PCB](Img/PC-B.png) | ![3D](Img/Excell.png) |
+| ![Gateway](Img/PC-A.png) | ![PC-B](Img/PC-B.png) | ![Excell](Img/Excell.png) |
 
 ## 🔧 How to Use
 
